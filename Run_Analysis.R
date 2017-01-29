@@ -17,7 +17,7 @@ x_data <- rbind(x_training, x_testing)
 y_data <- rbind(y_training, y_testing)
 
 # create 'we_do' data set
-we_do_data <- rbind(we_do_training, we_do_testing)
+we_do_data <- rbind(subject_train, subject_test)
 
 # Step 2
 
@@ -52,6 +52,6 @@ all_data <- cbind(x_data, y_data, we_do_data)
 
 # Step 5
 
-averages_data <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 1:66]))
+averages_data <- ddply(all_data, .(we_do, activity), function(x) colMeans(x[, 1:66]))
 
-write.table(averages_data, "averages_data.txt", row.name=FALSE)
+write.table(averages_data, "Tidy_data.txt", row.name=FALSE)
