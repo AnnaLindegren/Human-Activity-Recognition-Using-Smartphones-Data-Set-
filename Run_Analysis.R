@@ -4,11 +4,11 @@ library(plyr)
 
 x_training <- read.table("train/X_train.txt")
 y_training <- read.table("train/y_train.txt")
-we_do_training <- read.table("train/subject_train.txt")
+subject_train <- read.table("train/subject_train.txt")
 
 x_testing <- read.table("test/X_test.txt")
 y_testing <- read.table("test/y_test.txt")
-we_do_test <- read.table("test/subject_test.txt")
+subject_test <- read.table("test/subject_test.txt")
 
 # create 'x' data set
 x_data <- rbind(x_training, x_testing)
